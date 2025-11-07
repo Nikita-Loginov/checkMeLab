@@ -93,10 +93,6 @@ const Pricing: React.FC = () => {
 
   const currentPlans = targetAudience === 'personal' ? personalPlans : businessPlans;
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('ru-RU').format(price);
-  };
-
   return (
     <section id="pricing" className="py-20 bg-light">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
