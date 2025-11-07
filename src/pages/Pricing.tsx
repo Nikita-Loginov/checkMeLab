@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon, XMarkIcon, StarIcon, BriefcaseIcon, UserIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, StarIcon } from '@heroicons/react/24/outline';
 import { useModal } from '../context/ModalContext';
 
 const Pricing: React.FC = () => {

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
-  MapPinIcon,
   PaperAirplaneIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline';

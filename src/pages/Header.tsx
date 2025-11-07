@@ -97,6 +97,7 @@ const Header: React.FC = () => {
                   aria-label="Написать нам в бот"
                   title="CheckMe-Lab_bot"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 font-bold"
                 >
                   <Icons.TelegrammIcon className="w-6 h-6 text-white" />
@@ -162,6 +163,7 @@ const Header: React.FC = () => {
                   aria-label="Написать нам в бот"
                   title="CheckMe-Lab_bot"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 font-bold hover:text-secondary-400 transition-colors"
                 >
                   <Icons.TelegrammIcon className="w-6 h-6 text-white" />
