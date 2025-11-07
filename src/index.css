@@ -1,0 +1,88 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Кастомные утилиты */
+.gradient-bg {
+  background: linear-gradient(135deg, #2A3B7C 0%, #00C2CB 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #2A3B7C 0%, #00C2CB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-blue {
+  box-shadow: 0 10px 25px -5px rgba(42, 59, 124, 0.1), 0 4px 6px -2px rgba(42, 59, 124, 0.05);
+}
+
+.shadow-blue-lg {
+  box-shadow: 0 25px 50px -12px rgba(42, 59, 124, 0.25);
+}
+
+.shadow-teal {
+  box-shadow: 0 10px 25px -5px rgba(0, 194, 203, 0.1), 0 4px 6px -2px rgba(0, 194, 203, 0.05);
+}
+
+.shadow-teal-lg {
+  box-shadow: 0 25px 50px -12px rgba(0, 194, 203, 0.25);
+}
+
+/* Анимации для кнопок */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 194, 203, 0.4);
+}
+
+/* Стеклянные эффекты */
+.glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-header {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

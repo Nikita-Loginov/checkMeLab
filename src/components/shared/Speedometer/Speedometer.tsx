@@ -1,0 +1,53 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+interface SpeedometerProps {
+  percent: number;
+  color?: string;
+  bgCvet?: string;
+}
+
+const Speedometer: React.FC<SpeedometerProps> = ({
+  percent,
+  color = "#f3ee00",
+  bgCvet = "#f6fd8c",
+}) => {
+  const value = Math.min(Math.max(percent, 0), 100);
+
+  const radius = 90;
+  const circumference = Math.PI * radius;
+  const offset = circumference - (value / 100) * circumference;
+
+  return (
+    <div className="w-full h-[100px] relative flex items-center justify-center">
+      <svg viewBox="0 0 200 100" className="w-full h-full transform">
+        <path
+          d="M10,100 A90,90 0 0,1 190,100"
+          fill="none"
+          stroke={bgCvet}
+          strokeWidth="20"
+          strokeLinecap="round"
+        />
+
+        <motion.path
+          d="M10,100 A90,90 0 0,1 190,100"
+          fill="none"
+          stroke={color}
+          strokeWidth="20"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          initial={{ strokeDashoffset: circumference }}
+          animate={{ strokeDashoffset: offset }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        />
+      </svg>
+
+      <div className="absolute bottom-0 translate-y-1/2 text-center">
+        <div className="font-bold text-primary-500">{value}%</div>
+      </div>
+    </div>
+  );
+};
+
+export default Speedometer;
