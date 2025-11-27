@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 import Speedometer from "../Speedometer/Speedometer";
 
+import { CvetType } from "@/types";
+
 interface ServiceCardProps {
   skill: {
     name: string;
@@ -9,6 +11,8 @@ interface ServiceCardProps {
     id: number;
     now: number;
     finish: number;
+    speedometerFirstColor?: CvetType;
+    speedometerSecondColor?: CvetType;
   };
 }
 
@@ -25,7 +29,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ skill }) => {
 
       <div className="grid grid-cols-2 h-[140px] gap-4">
         <div className="flex flex-col items-center">
-          <Speedometer percent={skill.now} />
+          <Speedometer percent={skill.now}  color={skill.speedometerFirstColor || "yellow"}
+            bgCvet={skill.speedometerFirstColor || "yellow"}/>
 
           <p className="text-primary-500 font-semibold text-xs">Сейчас</p>
         </div>
@@ -33,8 +38,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ skill }) => {
         <div className="flex flex-col items-center">
           <Speedometer
             percent={skill.finish}
-            color="#ef7034"
-            bgCvet="#ffae95"
+            color={skill.speedometerSecondColor || "yellow"}
+            bgCvet={skill.speedometerSecondColor || "yellow"}
           />
 
           <p className="text-primary-500 font-semibold text-xs">Потенциал</p>

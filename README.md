@@ -58,33 +58,6 @@ npm run server
 ```bash
 npm run build
 ```
-
-## Структура проекта
-
-```
-check.me-lab/
-├── public/                 # Статические файлы
-├── src/                   # Исходный код
-│   ├── components/        # React компоненты
-│   │   ├── Header.tsx    # Шапка сайта
-│   │   ├── Hero.tsx      # Главная секция
-│   │   ├── About.tsx     # О компании
-│   │   ├── Services.tsx  # Услуги
-│   │   ├── HowItWorks.tsx # Как это работает
-│   │   ├── Pricing.tsx   # Тарифы
-│   │   ├── VIPProducts.tsx # VIP продукты
-│   │   ├── Contact.tsx   # Контакты и форма
-│   │   └── Footer.tsx    # Футер
-│   ├── App.tsx           # Главный компонент
-│   ├── index.tsx         # Точка входа
-│   └── index.css         # Глобальные стили
-├── server/               # Backend сервер
-│   └── index.js         # Express сервер
-├── package.json         # Зависимости проекта
-├── tailwind.config.js   # Конфигурация Tailwind
-└── tsconfig.json        # Конфигурация TypeScript
-```
-
 ## Особенности
 
 ### Адаптивный дизайн

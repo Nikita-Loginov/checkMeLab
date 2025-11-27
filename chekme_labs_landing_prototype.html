@@ -1,208 +1,451 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CHEKME Labs — Найм без лотереи за 10 минут</title>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yV_6jHHloo6eniN2uRbnb9JaT25qXMP3fHKE5YVXmBUGmkHkhJYaZAYcOiVTObnq525hZuWVk4OOBVuzrU3jdsfU_ShxEsV2aLqWWvwCYaIID3dSpXw3e8b8A7xoS6HK4WOFEhEJq_aAqO80QoBd6Mo_NPQ5wQApAo6tOkT8N_6_eklH893L8fARCEYbjLPEi8VOMBI33WFM5HTCLgweiIMTh6swHVUPxfn9dzSJBOnRSQa4oLpllf04gHOCcxu0RMv9fg35dJzTfW-7F84BYGa4Cu5el3Hvt28zDQiPAAsS-nAe6CrVb_uLROqF4pPf8CFE44_jZpwX0k6dK6mjJZnp6cRMer-bmJ2iHLW-hTjv7LOvbudU-c6JP3xrP-F05BLxAcx8IyXxqQHhz1kLZg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly91bmlvbnBvbHltZXIuYml0cml4MjQucnUvYml0cml4L3NlcnZpY2VzL21haW4vYWpheC5waHA_YWN0aW9uPWRpc2suYXBpLmZpbGUuZG93bmxvYWQmU0lURV9JRD1zMSZodW1hblJFPTEmZmlsZUlkPTIxNTYwNDgmd2lkdGg9MTI4MCZoZWlnaHQ9MTI4MCZzaWduYXR1cmU9NDI5YTdmYTVmNDg3MjQwNzNhMWI4YTAzYTE4ZWY0Mzg0NjA1OTNkYWYyYmNhOTFkOGU3YzdlNmM4OWE1YzA3YyZleGFjdD1OJmZpbGVOYW1lPWNoZWttZV9sYWJzX2xhbmRpbmdfcHJvdG90eXBlLmh0bWw"/><style>
-  :root{
-    --bg:#0f1221; --fg:#f5f7ff; --muted:#a9b0c6; --accent:#6ee7ff; --accent2:#9dff6e;
-    --card:#151935; --line:#232853;
-  }
-  *{box-sizing:border-box}
-  body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial; color:var(--fg); background:linear-gradient(180deg,#0c0f1d, #0f1221 40%, #0f1221)}
-  a{color:var(--accent)}
-  .container{max-width:1100px; margin:0 auto; padding:0 20px}
-  .hero{padding:80px 0 40px; display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:center}
-  .title{font-weight:800; font-size:40px; line-height:1.15; margin:0 0 12px}
-  .subtitle{color:var(--muted); margin:0 0 24px}
-  .badges{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 24px}
-  .badge{border:1px solid var(--line); background:rgba(255,255,255,.03); padding:6px 10px; border-radius:999px; font-size:13px; color:#dbe1ff}
-  .buttons{display:flex; gap:12px; flex-wrap:wrap}
-  .btn{padding:12px 18px; border-radius:12px; border:1px solid transparent; text-decoration:none; font-weight:700; display:inline-block}
-  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#0b1024}
-  .btn-secondary{border-color:var(--line); color:#e2e6ff; background:#151935}
-  .panel{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px}
-  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-  .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
-  h2{font-size:28px; margin:50px 0 12px}
-  h3{font-size:20px; margin:0 0 8px}
-  ul{margin:0; padding-left:18px}
-  .placeholder{height:220px; border:1px dashed var(--line); border-radius:12px; display:flex; align-items:center; justify-content:center; color:var(--muted)}
-  .section{padding:24px 0}
-  .footer{padding:40px 0 60px; color:#b9c0dc}
-  .logo{font-weight:900; letter-spacing:.5px}
-  .note{font-size:13px; color:#9aa3c6}
-  .sep{height:1px; background:linear-gradient(90deg,transparent,var(--line),transparent); margin:28px 0}
-  @media (max-width: 900px){
-    .hero{grid-template-columns:1fr}
-    .grid-3{grid-template-columns:1fr}
-    .grid-2{grid-template-columns:1fr}
-  }
-</style>
-</head>
-<body>
-  <header class="container section" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
-    <div class="logo">CHEKME Labs</div>
-    <nav style="display:flex; gap:18px; font-size:14px;">
-      <a href="#how">Как это работает</a>
-      <a href="#demo">Демо‑отчёт</a>
-      <a href="#roi">Экономика</a>
-      <a href="#pilot">Пилот</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CHEKME Labs — Найм без лотереи за 10 минут</title>
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yV_6jHHloo6eniN2uRbnb9JaT25qXMP3fHKE5YVXmBUGmkHkhJYaZAYcOiVTObnq525hZuWVk4OOBVuzrU3jdsfU_ShxEsV2aLqWWvwCYaIID3dSpXw3e8b8A7xoS6HK4WOFEhEJq_aAqO80QoBd6Mo_NPQ5wQApAo6tOkT8N_6_eklH893L8fARCEYbjLPEi8VOMBI33WFM5HTCLgweiIMTh6swHVUPxfn9dzSJBOnRSQa4oLpllf04gHOCcxu0RMv9fg35dJzTfW-7F84BYGa4Cu5el3Hvt28zDQiPAAsS-nAe6CrVb_uLROqF4pPf8CFE44_jZpwX0k6dK6mjJZnp6cRMer-bmJ2iHLW-hTjv7LOvbudU-c6JP3xrP-F05BLxAcx8IyXxqQHhz1kLZg"
+      charset="UTF-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly91bmlvbnBvbHltZXIuYml0cml4MjQucnUvYml0cml4L3NlcnZpY2VzL21haW4vYWpheC5waHA_YWN0aW9uPWRpc2suYXBpLmZpbGUuZG93bmxvYWQmU0lURV9JRD1zMSZodW1hblJFPTEmZmlsZUlkPTIxNTYwNDgmd2lkdGg9MTI4MCZoZWlnaHQ9MTI4MCZzaWduYXR1cmU9NDI5YTdmYTVmNDg3MjQwNzNhMWI4YTAzYTE4ZWY0Mzg0NjA1OTNkYWYyYmNhOTFkOGU3YzdlNmM4OWE1YzA3YyZleGFjdD1OJmZpbGVOYW1lPWNoZWttZV9sYWJzX2xhbmRpbmdfcHJvdG90eXBlLmh0bWw"
+    />
+    <style>
+      :root {
+        --bg: #0f1221;
+        --fg: #f5f7ff;
+        --muted: #a9b0c6;
+        --accent: #6ee7ff;
+        --accent2: #9dff6e;
+        --card: #151935;
+        --line: #232853;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          "Helvetica Neue", Arial;
+        color: var(--fg);
+        background: linear-gradient(180deg, #0c0f1d, #0f1221 40%, #0f1221);
+      }
+      a {
+        color: var(--accent);
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .hero {
+        padding: 80px 0 40px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 32px;
+        align-items: center;
+      }
+      .title {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 1.15;
+        margin: 0 0 12px;
+      }
+      .subtitle {
+        color: var(--muted);
+        margin: 0 0 24px;
+      }
+      .badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 10px 0 24px;
+      }
+      .badge {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: #dbe1ff;
+      }
+      .buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 12px 18px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #0b1024;
+      }
+      .btn-secondary {
+        border-color: var(--line);
+        color: #e2e6ff;
+        background: #151935;
+      }
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      h2 {
+        font-size: 28px;
+        margin: 50px 0 12px;
+      }
+      h3 {
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .placeholder {
+        height: 220px;
+        border: 1px dashed var(--line);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+      }
+      .section {
+        padding: 24px 0;
+      }
+      .footer {
+        padding: 40px 0 60px;
+        color: #b9c0dc;
+      }
+      .logo {
+        font-weight: 900;
+        letter-spacing: 0.5px;
+      }
+      .note {
+        font-size: 13px;
+        color: #9aa3c6;
+      }
+      .sep {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--line),
+          transparent
+        );
+        margin: 28px 0;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="container section"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      "
+    >
+      <div class="logo">CHEKME Labs</div>
+      <nav style="display: flex; gap: 18px; font-size: 14px">
+        <a href="#how">Как это работает</a>
+        <a href="#demo">Демо‑отчёт</a>
+        <a href="#roi">Экономика</a>
+        <a href="#pilot">Пилот</a>
+      </nav>
+    </header>
 
-  <main class="container">
-    <section class="hero">
-      <div>
-        <h1 class="title">Найм без лотереи за 10 минут</h1>
-        <p class="subtitle">Нейротест подсознания + AI → отчёт сегодня. Онлайн, без датчиков, по согласию.</p>
-        <div class="badges">
-          <div class="badge">≈95% точность</div>
-          <div class="badge">Онлайн 24/7</div>
-          <div class="badge">Без датчиков</div>
-          <div class="badge">По согласию</div>
-          <div class="badge">Пилот 100 тестов</div>
-        </div>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#pilot">Запустить пилот</a>
-          <a class="btn btn-secondary" href="#demo">Смотреть демо‑отчёт</a>
-        </div>
-      </div>
-      <div class="panel">
-        <h3>3 факта за которые платят</h3>
-        <ul>
-          <li>10 минут → видно, кто перформер, а кто «не ваш»</li>
-          <li>Подсознательные реакции → «сыграть роль» невозможно</li>
-          <li>В день теста: надёжность, мотивация, риски под роль</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="how" class="section">
-      <h2>Как это работает (3 шага)</h2>
-      <div class="grid-3">
-        <div class="panel">
-          <h3>1) Кодированные изображения</h3>
-          <p class="note">Мозг декодирует подсознательно, сознание не успевает «играть роль».</p>
-        </div>
-        <div class="panel">
-          <h3>2) Реакция за 10 минут</h3>
-          <p class="note">Кандидат кликает при смене картинок — собираем сотни реакций.</p>
-        </div>
-        <div class="panel">
-          <h3>3) Аналитика и отчёт</h3>
-          <p class="note">Статистика → рейтинг, риски, рекомендации. Экспорт PDF.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="demo" class="section">
-      <h2>Демо‑отчёт</h2>
-      <div class="placeholder">Здесь будет превью диаграммы/рейтинга (макет)</div>
-      <p class="note">Покажем пример отчёта по реальной роли. Без персональных данных.</p>
-    </section>
-
-    <section id="roi" class="section">
-      <h2>Экономика и ROI</h2>
-      <div class="grid-2">
-        <div class="panel">
-          <h3>Калькулятор стоимости плохого найма</h3>
-          <label>Мес. зарплата (₽):<br><input id="sal" type="number" value="120000" style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid var(--line); background:#0f1221; color:var(--fg)"></label>
-          <label>Месяцев до «разворота»:<br><input id="months" type="number" value="3" style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid var(--line); background:#0f1221; color:var(--fg)"></label>
-          <label>Обучение и простой (₽):<br><input id="train" type="number" value="80000" style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid var(--line); background:#0f1221; color:var(--fg)"></label>
-          <label>Повторный поиск (₽):<br><input id="rehire" type="number" value="60000" style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid var(--line); background:#0f1221; color:var(--fg)"></label>
-          <div class="sep"></div>
-          <div id="loss" class="panel" style="background:#0b1024">Итого потери: —</div>
-        </div>
-        <div class="panel">
-          <h3>Что меняется с пилотом</h3>
-          <ul>
-            <li>Меньше замен и ошибок найма</li>
-            <li>90‑day retention выше</li>
-            <li>Вакансии закрываются быстрее и дешевле</li>
-          </ul>
-          <p class="note">Окупаемость — в первый месяц при входящем потоке ≥ 30 кандидатов.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Кейсы</h2>
-      <div class="grid-3">
-        <div class="panel">
-          <h3>Агентство / RPO</h3>
-          <p class="note">Замены по гарантии −42%, time‑to‑submit −27% за 14 дней пилота.</p>
-        </div>
-        <div class="panel">
-          <h3>Колл‑центр / BPO</h3>
-          <p class="note">90‑day retention +18 п.п., обучение −22%.</p>
-        </div>
-        <div class="panel">
-          <h3>Ритейл / Склад</h3>
-          <p class="note">Недостачи ↓, дисциплина ↑, удержание 60‑90 дней +15 п.п.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Безопасность и юридика</h2>
-      <div class="grid-3">
-        <div class="panel"><h3>По согласию</h3><p class="note">Прозрачная цель теста, согласие кандидата.</p></div>
-        <div class="panel"><h3>Защита данных</h3><p class="note">Шифрование, контроль доступа, удаление по SLA.</p></div>
-        <div class="panel"><h3>Поддержка решения</h3><p class="note">Тест даёт данные, решение остаётся за менеджером.</p></div>
-      </div>
-    </section>
-
-    <section id="pilot" class="section">
-      <div class="panel" style="display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+    <main class="container">
+      <section class="hero">
         <div>
-          <h2 style="margin:0 0 6px">Пилот 100 тестов / 14 дней + личный разбор</h2>
-          <p class="note" style="margin:0">Онбординг 48 часов. Первые результаты — в день теста.</p>
+          <h1 class="title">Найм без лотереи за 10 минут</h1>
+          <p class="subtitle">
+            Нейротест подсознания + AI → отчёт сегодня. Онлайн, без датчиков, по
+            согласию.
+          </p>
+          <div class="badges">
+            <div class="badge">≈95% точность</div>
+            <div class="badge">Онлайн 24/7</div>
+            <div class="badge">Без датчиков</div>
+            <div class="badge">По согласию</div>
+            <div class="badge">Пилот 100 тестов</div>
+          </div>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#pilot">Запустить пилот</a>
+            <a class="btn btn-secondary" href="#demo">Смотреть демо‑отчёт</a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="#contact">Запустить пилот</a>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Контакты</h2>
-      <div class="grid-2">
         <div class="panel">
-          <h3>Напишите «ТЕСТ»</h3>
-          <p class="note">Мы вышлем 2 шага к старту и доступ в систему.</p>
+          <h3>3 факта за которые платят</h3>
           <ul>
-            <li>Email: hello@chekme-labs.example</li>
-            <li>Telegram: t.me/chekme_labs</li>
-            <li>Сайт: chekme-labs.example</li>
+            <li>10 минут → видно, кто перформер, а кто «не ваш»</li>
+            <li>Подсознательные реакции → «сыграть роль» невозможно</li>
+            <li>В день теста: надёжность, мотивация, риски под роль</li>
           </ul>
         </div>
-        <div class="panel">
-          <h3>Форма заявки (пример)</h3>
-          <div class="placeholder">Здесь будет форма (Имя, Телефон, Email, Роль)</div>
+      </section>
+
+      <section id="how" class="section">
+        <h2>Как это работает (3 шага)</h2>
+        <div class="grid-3">
+          <div class="panel">
+            <h3>1) Кодированные изображения</h3>
+            <p class="note">
+              Мозг декодирует подсознательно, сознание не успевает «играть
+              роль».
+            </p>
+          </div>
+          <div class="panel">
+            <h3>2) Реакция за 10 минут</h3>
+            <p class="note">
+              Кандидат кликает при смене картинок — собираем сотни реакций.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>3) Аналитика и отчёт</h3>
+            <p class="note">
+              Статистика → рейтинг, риски, рекомендации. Экспорт PDF.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="sep"></div>
-  </main>
+      <section id="demo" class="section">
+        <h2>Демо‑отчёт</h2>
+        <div class="placeholder">
+          Здесь будет превью диаграммы/рейтинга (макет)
+        </div>
+        <p class="note">
+          Покажем пример отчёта по реальной роли. Без персональных данных.
+        </p>
+      </section>
 
-  <footer class="container footer">
-    © CHEKME Labs · Политика ПДн · Публичная оферта · Без абсолютных обещаний. Инструмент поддержки решений.
-  </footer>
+      <section id="roi" class="section">
+        <h2>Экономика и ROI</h2>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Калькулятор стоимости плохого найма</h3>
+            <label
+              >Мес. зарплата (₽):<br /><input
+                id="sal"
+                type="number"
+                value="120000"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  margin: 6px 0;
+                  border-radius: 8px;
+                  border: 1px solid var(--line);
+                  background: #0f1221;
+                  color: var(--fg);
+                "
+            /></label>
+            <label
+              >Месяцев до «разворота»:<br /><input
+                id="months"
+                type="number"
+                value="3"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  margin: 6px 0;
+                  border-radius: 8px;
+                  border: 1px solid var(--line);
+                  background: #0f1221;
+                  color: var(--fg);
+                "
+            /></label>
+            <label
+              >Обучение и простой (₽):<br /><input
+                id="train"
+                type="number"
+                value="80000"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  margin: 6px 0;
+                  border-radius: 8px;
+                  border: 1px solid var(--line);
+                  background: #0f1221;
+                  color: var(--fg);
+                "
+            /></label>
+            <label
+              >Повторный поиск (₽):<br /><input
+                id="rehire"
+                type="number"
+                value="60000"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  margin: 6px 0;
+                  border-radius: 8px;
+                  border: 1px solid var(--line);
+                  background: #0f1221;
+                  color: var(--fg);
+                "
+            /></label>
+            <div class="sep"></div>
+            <div id="loss" class="panel" style="background: #0b1024">
+              Итого потери: —
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Что меняется с пилотом</h3>
+            <ul>
+              <li>Меньше замен и ошибок найма</li>
+              <li>90‑day retention выше</li>
+              <li>Вакансии закрываются быстрее и дешевле</li>
+            </ul>
+            <p class="note">
+              Окупаемость — в первый месяц при входящем потоке ≥ 30 кандидатов.
+            </p>
+          </div>
+        </div>
+      </section>
 
-<script>
-function calcLoss(){
-  const sal=+document.getElementById('sal').value||0;
-  const months=+document.getElementById('months').value||0;
-  const train=+document.getElementById('train').value||0;
-  const rehire=+document.getElementById('rehire').value||0;
-  const loss = sal*months + train + rehire;
-  document.getElementById('loss').textContent = 'Итого потери: ' + loss.toLocaleString('ru-RU') + ' ₽';
-}
-['sal','months','train','rehire'].forEach(id=>{
-  document.getElementById(id).addEventListener('input', calcLoss);
-});
-calcLoss();
-</script>
-</body>
+      <section class="section">
+        <h2>Кейсы</h2>
+        <div class="grid-3">
+          <div class="panel">
+            <h3>Агентство / RPO</h3>
+            <p class="note">
+              Замены по гарантии −42%, time‑to‑submit −27% за 14 дней пилота.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Колл‑центр / BPO</h3>
+            <p class="note">90‑day retention +18 п.п., обучение −22%.</p>
+          </div>
+          <div class="panel">
+            <h3>Ритейл / Склад</h3>
+            <p class="note">
+              Недостачи ↓, дисциплина ↑, удержание 60‑90 дней +15 п.п.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Безопасность и юридика</h2>
+        <div class="grid-3">
+          <div class="panel">
+            <h3>По согласию</h3>
+            <p class="note">Прозрачная цель теста, согласие кандидата.</p>
+          </div>
+          <div class="panel">
+            <h3>Защита данных</h3>
+            <p class="note">Шифрование, контроль доступа, удаление по SLA.</p>
+          </div>
+          <div class="panel">
+            <h3>Поддержка решения</h3>
+            <p class="note">
+              Тест даёт данные, решение остаётся за менеджером.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pilot" class="section">
+        <div
+          class="panel"
+          style="
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+          "
+        >
+          <div>
+            <h2 style="margin: 0 0 6px">
+              Пилот 100 тестов / 14 дней + личный разбор
+            </h2>
+            <p class="note" style="margin: 0">
+              Онбординг 48 часов. Первые результаты — в день теста.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Запустить пилот</a>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Контакты</h2>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Напишите «ТЕСТ»</h3>
+            <p class="note">Мы вышлем 2 шага к старту и доступ в систему.</p>
+            <ul>
+              <li>Email: hello@chekme-labs.example</li>
+              <li>Telegram: t.me/chekme_labs</li>
+              <li>Сайт: chekme-labs.example</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Форма заявки (пример)</h3>
+            <div class="placeholder">
+              Здесь будет форма (Имя, Телефон, Email, Роль)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sep"></div>
+    </main>
+
+    <footer class="container footer">
+      © CHEKME Labs · Политика ПДн · Публичная оферта · Без абсолютных обещаний.
+      Инструмент поддержки решений.
+    </footer>
+
+    <script>
+      function calcLoss() {
+        const sal = +document.getElementById("sal").value || 0;
+        const months = +document.getElementById("months").value || 0;
+        const train = +document.getElementById("train").value || 0;
+        const rehire = +document.getElementById("rehire").value || 0;
+        const loss = sal * months + train + rehire;
+        document.getElementById("loss").textContent =
+          "Итого потери: " + loss.toLocaleString("ru-RU") + " ₽";
+      }
+      ["sal", "months", "train", "rehire"].forEach((id) => {
+        document.getElementById(id).addEventListener("input", calcLoss);
+      });
+      calcLoss();
+    </script>
+  </body>
 </html>

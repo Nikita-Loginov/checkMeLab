@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.line {
+  height: 10px;
+  width: 100%;
+}
+
+.decor {
+  width: 100%;
+  display: flex;
+  gap: 1px;
+}
+
+.line-decor-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.line-decor {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: 10px;
+}
